@@ -84,7 +84,7 @@ const HeroSection = () => {
             Download the app now!
           </Button>
           <p className="text-foreground/80 text-sm mt-4">
-            Be among the first to experience Tilawah
+            Coming to Play Store soon!
           </p>
         </motion.div>
 
