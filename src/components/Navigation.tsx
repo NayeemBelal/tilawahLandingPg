@@ -52,12 +52,12 @@ const Navigation = () => {
         transition={{ duration: 0.4 }}
         className={`transition-all duration-300 ${
           scrolled
-            ? "shadow-lg backdrop-blur-xl bg-background/80"
-            : "backdrop-blur-lg bg-background/60"
+            ? "shadow-lg bg-[#1D2E28]"
+            : "bg-[#1D2E28]"
         }`}
         style={{
           borderRadius: "50px",
-          border: "1px solid rgba(29, 46, 40, 0.2)",
+          border: "1px solid rgba(29, 46, 40, 0.3)",
           willChange: "transform, opacity",
         }}
       >
@@ -79,7 +79,7 @@ const Navigation = () => {
                 alt="Tilawah"
                 className="w-8 h-8 md:w-11 md:h-11"
               />
-              <span className="text-foreground font-bold text-base md:text-lg">
+              <span className="text-white font-bold text-base md:text-lg">
                 Tilawah
               </span>
             </Link>
@@ -87,9 +87,9 @@ const Navigation = () => {
             {/* Mobile Contact Icon */}
             <button
               onClick={handleContactClick}
-              className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors duration-200"
+              className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-200"
             >
-              <MessageCircle className="w-5 h-5 text-foreground" />
+              <MessageCircle className="w-5 h-5 text-white" />
             </button>
 
             {/* Navigation Links */}
@@ -98,25 +98,25 @@ const Navigation = () => {
                 <>
                   <a
                     href="#how-it-works"
-                    className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                    className="text-white/90 hover:text-white transition-colors text-sm font-medium"
                   >
                     How it Works
                   </a>
                   <a
                     href="#comparison"
-                    className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                    className="text-white/90 hover:text-white transition-colors text-sm font-medium"
                   >
                     Why Tilawah?
                   </a>
                   <a
                     href="#features"
-                    className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                    className="text-white/90 hover:text-white transition-colors text-sm font-medium"
                   >
                     Features
                   </a>
                   <button
                     onClick={handleContactClick}
-                    className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                    className="text-white/90 hover:text-white transition-colors text-sm font-medium"
                   >
                     Contact
                   </button>
@@ -125,7 +125,7 @@ const Navigation = () => {
                 <>
                   <Link
                     to="/#how-it-works"
-                    className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                    className="text-white/90 hover:text-white transition-colors text-sm font-medium"
                     onClick={() => {
                       setTimeout(() => {
                         window.scrollTo(0, 0);
@@ -136,7 +136,7 @@ const Navigation = () => {
                   </Link>
                   <Link
                     to="/#comparison"
-                    className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                    className="text-white/90 hover:text-white transition-colors text-sm font-medium"
                     onClick={() => {
                       setTimeout(() => {
                         window.scrollTo(0, 0);
@@ -147,7 +147,7 @@ const Navigation = () => {
                   </Link>
                   <Link
                     to="/#features"
-                    className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                    className="text-white/90 hover:text-white transition-colors text-sm font-medium"
                     onClick={() => {
                       setTimeout(() => {
                         window.scrollTo(0, 0);
@@ -158,7 +158,7 @@ const Navigation = () => {
                   </Link>
                   <button
                     onClick={handleContactClick}
-                    className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                    className="text-white/90 hover:text-white transition-colors text-sm font-medium"
                   >
                     Contact
                   </button>
@@ -171,13 +171,13 @@ const Navigation = () => {
             <Button
               variant="pattrn"
               size="sm"
-              className="rounded-full whitespace-nowrap"
+              className="rounded-full whitespace-nowrap bg-[#2A3F38] text-white hover:bg-[#3A4F48]"
               onClick={() => {
-                // TODO: Update with actual Tilawah app store link
-                window.open('#', '_blank');
+                // Link to Tilawah app on App Store
+                window.open('https://apps.apple.com/us/app/tilawah/id6749555708', '_blank');
               }}
             >
-              Join Waitlist
+              Start now!
             </Button>
           </div>
         </div>

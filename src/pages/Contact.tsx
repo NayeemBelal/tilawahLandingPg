@@ -27,6 +27,7 @@ const Contact = () => {
         from_email: email,
         message: message,
         to_email: "your-email@example.com", // Replace with your email
+        website: "Tilawah",
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
@@ -54,6 +55,20 @@ const Contact = () => {
         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-foreground/5 to-transparent rounded-full blur-2xl pointer-events-none"></div>
 
         <div className="max-w-2xl mx-auto">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-center mb-12 pt-8"
+          >
+            <h1 className="text-4xl md:text-5xl font-semibold text-[#1D2E28] mb-4 leading-tight">
+              Get in Touch
+            </h1>
+            <p className="text-lg text-[#1D2E28]/70 max-w-xl mx-auto">
+              Have feedback, questions, or need help? We'd love to hear from you.
+            </p>
+          </motion.div>
 
           {/* Success Message */}
           {isSubmitted && (
@@ -88,21 +103,7 @@ const Contact = () => {
           {/* Contact Form */}
           {!isSubmitted && (
             <>
-              {/* Header */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-center mb-6"
-              >
-                <h1 className="text-3xl md:text-4xl font-heading text-foreground mb-3 leading-tight">
-                  Contact Us
-                </h1>
-                <p className="text-base font-subheading text-foreground/80 leading-relaxed">
-                  Have questions about Tilawah? We'd love to hear from you and help you get started on your Quran journey
-                </p>
-              </motion.div>
-
+              {/* Email Input */}
               <motion.form
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -110,7 +111,6 @@ const Contact = () => {
                 onSubmit={handleSubmit}
                 className="space-y-4 mb-8"
               >
-              {/* Email Input */}
               <div>
                 <label htmlFor="email" className="block text-foreground text-sm font-medium mb-1">
                   Email Address
@@ -122,7 +122,7 @@ const Contact = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 bg-card/80 border border-border rounded-lg text-foreground placeholder-foreground/40 focus:outline-none focus:border-primary transition-colors duration-200 disabled:opacity-50"
+                  className="w-full px-4 py-3 bg-transparent border border-[#1D2E28]/30 rounded-lg text-foreground placeholder-foreground/40 focus:outline-none focus:border-[#1D2E28] transition-colors duration-200 disabled:opacity-50"
                   placeholder="your@email.com"
                 />
               </div>
@@ -139,7 +139,7 @@ const Contact = () => {
                   required
                   rows={6}
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 bg-card/80 border border-border rounded-lg text-foreground placeholder-foreground/40 focus:outline-none focus:border-primary transition-colors duration-200 resize-none disabled:opacity-50"
+                  className="w-full px-4 py-3 bg-transparent border border-[#1D2E28]/30 rounded-lg text-foreground placeholder-foreground/40 focus:outline-none focus:border-[#1D2E28] transition-colors duration-200 resize-none disabled:opacity-50"
                   placeholder="Questions about Tilawah, feedback, anything..."
                 />
               </div>

@@ -43,32 +43,32 @@ body {
 
 @layer base {
   :root {
-    --background: 50 45% 87%; /* #EDE8D0 */
+    --background: 60 100% 96%; /* #FFFDE7 */
     --foreground: 160 20% 18%; /* #1D2E28 */
 
-    --card: 60 20% 85%; /* #E8E0C0 */
+    --card: 60 100% 96%; /* #FFFDE7 */
     --card-foreground: 160 20% 18%; /* #1D2E28 */
 
-    --popover: 60 20% 85%; /* #E8E0C0 */
+    --popover: 60 100% 96%; /* #FFFDE7 */
     --popover-foreground: 160 20% 18%; /* #1D2E28 */
 
     --primary: 160 20% 18%; /* #1D2E28 */
-    --primary-foreground: 60 20% 90%; /* #EDE8D0 */
+    --primary-foreground: 60 100% 96%; /* #FFFDE7 */
 
-    --secondary: 60 20% 80%; /* #E0D8B0 */
+    --secondary: 60 100% 96%; /* #FFFDE7 */
     --secondary-foreground: 160 20% 18%; /* #1D2E28 */
 
-    --muted: 60 20% 75%; /* #D8D0A0 */
+    --muted: 60 100% 96%; /* #FFFDE7 */
     --muted-foreground: 160 20% 18%; /* #1D2E28 */
 
     --accent: 160 20% 18%; /* #1D2E28 */
-    --accent-foreground: 60 20% 90%; /* #EDE8D0 */
+    --accent-foreground: 60 100% 96%; /* #FFFDE7 */
 
     --destructive: 0 84% 60%; /* #EF4444 */
-    --destructive-foreground: 60 20% 90%; /* #EDE8D0 */
+    --destructive-foreground: 60 100% 96%; /* #FFFDE7 */
 
-    --border: 60 20% 70%; /* #D0C890 */
-    --input: 60 20% 70%; /* #D0C890 */
+    --border: 60 100% 96%; /* #FFFDE7 */
+    --input: 60 100% 96%; /* #FFFDE7 */
     --ring: 160 20% 18%; /* #1D2E28 */
 
     --radius: 0.75rem;
@@ -76,35 +76,35 @@ body {
     /* Custom Tilawah tokens */
     --hero-text: 160 20% 18%; /* #1D2E28 */
     --subtext: 160 20% 25%; /* #2A3F38 */
-    --nav-bg: 60 20% 85%; /* #E8E0C0 */
+    --nav-bg: 60 100% 96%; /* #FFFDE7 */
     --gradient-primary: linear-gradient(
       135deg,
       hsl(160 20% 18%),
       hsl(160 20% 25%)
     );
-    --gradient-card: linear-gradient(135deg, hsl(60 20% 85%), hsl(60 20% 80%));
+    --gradient-card: linear-gradient(135deg, hsl(60 100% 96%), hsl(60 100% 96%));
     --glow-green: 0 0 40px hsl(160 20% 18% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 60 20% 90%; /* #EDE8D0 */
+    --sidebar-background: 60 100% 96%; /* #FFFDE7 */
 
     --sidebar-foreground: 160 20% 18%; /* #1D2E28 */
 
     --sidebar-primary: 160 20% 18%; /* #1D2E28 */
 
-    --sidebar-primary-foreground: 60 20% 90%; /* #EDE8D0 */
+    --sidebar-primary-foreground: 60 100% 96%; /* #FFFDE7 */
 
-    --sidebar-accent: 60 20% 85%; /* #E8E0C0 */
+    --sidebar-accent: 60 100% 96%; /* #FFFDE7 */
 
     --sidebar-accent-foreground: 160 20% 18%; /* #1D2E28 */
 
-    --sidebar-border: 60 20% 70%; /* #D0C890 */
+    --sidebar-border: 60 100% 96%; /* #FFFDE7 */
 
     --sidebar-ring: 160 20% 18%; /* #1D2E28 */
   }
 
   .light {
-    --background: 60 20% 90%; /* #EDE8D0 */
+    --background: 60 100% 96%; /* #FFFDE7 */
     --foreground: 160 20% 18%; /* #1D2E28 */
     /* Light mode overrides for Tilawah design - keeping warm as primary */
   }
@@ -123,9 +123,9 @@ body {
 
     /* Subtle multi-layer color wash */
     background-image:
-      radial-gradient(1200px 600px at 10% 10%, hsl(60 20% 95% / 0.5), transparent 60%),
+      radial-gradient(1200px 600px at 10% 10%, hsl(60 100% 96% / 0.5), transparent 60%),
       radial-gradient(900px 500px at 85% 15%, hsl(160 20% 18% / 0.06), transparent 70%),
-      radial-gradient(1000px 600px at 25% 80%, hsl(50 45% 87% / 0.35), transparent 65%);
+      radial-gradient(1000px 600px at 25% 80%, hsl(60 100% 96% / 0.35), transparent 65%);
     background-repeat: no-repeat;
     background-attachment: fixed;
   }

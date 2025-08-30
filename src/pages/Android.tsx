@@ -33,6 +33,7 @@ const AndroidPage = () => {
           from_name: name,
           from_email: email,
           message: `Android Waitlist Request from ${name} (${email})`,
+          website: "Tilawah",
         },
         'gJCVxP7dQjZdVFySE' // Replace with your EmailJS public key
       );

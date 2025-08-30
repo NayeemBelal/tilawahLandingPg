@@ -67,15 +67,15 @@ const HowItWorksSection = () => {
             size="default"
             className="rounded-full h-12 px-8 text-base font-semibold"
             style={{
-              backgroundColor: '#EDE8D0',
+              backgroundColor: '#FFFDE7',
               color: '#1D2E28'
             }}
             onClick={() => {
-              // TODO: Update with actual Tilawah app link
-              window.open('#', '_blank');
+              // Link to Tilawah app on App Store
+              window.open('https://apps.apple.com/us/app/tilawah/id6749555708', '_blank');
             }}
           >
-            Join the Waitlist
+            Start learning now!
           </Button>
         </div>
 

@@ -196,11 +196,11 @@ const FeaturesSection = () => {
             size="default"
             className="rounded-full h-12 px-8 text-base font-semibold shadow-2xl shadow-primary/20"
             onClick={() => {
-              // TODO: Update with actual Tilawah app link
-              window.open('#', '_blank');
+              // Link to Tilawah app on App Store
+              window.open('https://apps.apple.com/us/app/tilawah/id6749555708', '_blank');
             }}
           >
-            Join the Waitlist
+             Join Now
           </Button>
         </div>
       </div>

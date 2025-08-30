@@ -11,11 +11,12 @@ const HeroSection = () => {
         backgroundImage: `url(${colorWashBackground})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Semi-transparent overlay to make background more subtle */}
-      <div className="absolute inset-0 bg-background/40 pointer-events-none"></div>
+      {/* Reduced overlay opacity to make wash wall more apparent */}
+      <div className="absolute inset-0 bg-background/5 pointer-events-none"></div>
+
 
       {/* Subtle gradient overlay */}
       <div className="hidden md:block absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-foreground/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
@@ -45,9 +46,10 @@ const HeroSection = () => {
           className="text-5xl sm:text-4xl md:text-6xl font-heading text-foreground mb-4 md:mb-6 leading-tight"
           style={{ willChange: "transform, opacity" }}
         >
-          Your Quran Recitation
+          Find a partner to recite
           <br />
-          <span className="text-foreground font-heading">Companion</span>
+          Quran with
+
         </motion.h1>
 
         {/* Subheadline */}
@@ -59,8 +61,7 @@ const HeroSection = () => {
           style={{ willChange: "transform, opacity" }}
         >
           Connect with Quran partners, perfect your recitation, and build consistency 
-          in your journey with the Book of Allah. Whether you're a Hafidh or a learner, 
-          Tilawah brings you the accountability and support you need.
+          in your journey with the Book of Allah.
         </motion.p>
 
         {/* CTA Button */}
@@ -76,11 +77,11 @@ const HeroSection = () => {
             size="default"
             className="rounded-full h-12 px-8 text-base font-semibold shadow-2xl shadow-foreground/20"
             onClick={() => {
-              // TODO: Update with actual Tilawah app link
-              window.open('#', '_blank');
+              // Link to Tilawah app on App Store
+              window.open('https://apps.apple.com/us/app/tilawah/id6749555708', '_blank');
             }}
           >
-            Join the Waitlist
+            Download the app now!
           </Button>
           <p className="text-foreground/80 text-sm mt-4">
             Be among the first to experience Tilawah
