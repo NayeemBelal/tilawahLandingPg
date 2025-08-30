@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SF Pro Font Configuration */
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff")
+    format("woff");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff")
+    format("woff");
+}
+
+/* Body */
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscotext-regular-webfont.woff")
+    format("woff");
+}
+
+:root {
+  --font-sans: "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Inter", var(--font-sans);
+}
+body {
+  font-family: var(--font-sans);
+}
+
+/* Tilawah inspired design system - warm, modern, Quran-focused */
+
+@layer base {
+  :root {
+    --background: 50 45% 87%; /* #EDE8D0 */
+    --foreground: 160 20% 18%; /* #1D2E28 */
+
+    --card: 60 20% 85%; /* #E8E0C0 */
+    --card-foreground: 160 20% 18%; /* #1D2E28 */
+
+    --popover: 60 20% 85%; /* #E8E0C0 */
+    --popover-foreground: 160 20% 18%; /* #1D2E28 */
+
+    --primary: 160 20% 18%; /* #1D2E28 */
+    --primary-foreground: 60 20% 90%; /* #EDE8D0 */
+
+    --secondary: 60 20% 80%; /* #E0D8B0 */
+    --secondary-foreground: 160 20% 18%; /* #1D2E28 */
+
+    --muted: 60 20% 75%; /* #D8D0A0 */
+    --muted-foreground: 160 20% 18%; /* #1D2E28 */
+
+    --accent: 160 20% 18%; /* #1D2E28 */
+    --accent-foreground: 60 20% 90%; /* #EDE8D0 */
+
+    --destructive: 0 84% 60%; /* #EF4444 */
+    --destructive-foreground: 60 20% 90%; /* #EDE8D0 */
+
+    --border: 60 20% 70%; /* #D0C890 */
+    --input: 60 20% 70%; /* #D0C890 */
+    --ring: 160 20% 18%; /* #1D2E28 */
+
+    --radius: 0.75rem;
+
+    /* Custom Tilawah tokens */
+    --hero-text: 160 20% 18%; /* #1D2E28 */
+    --subtext: 160 20% 25%; /* #2A3F38 */
+    --nav-bg: 60 20% 85%; /* #E8E0C0 */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(160 20% 18%),
+      hsl(160 20% 25%)
+    );
+    --gradient-card: linear-gradient(135deg, hsl(60 20% 85%), hsl(60 20% 80%));
+    --glow-green: 0 0 40px hsl(160 20% 18% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 60 20% 90%; /* #EDE8D0 */
+
+    --sidebar-foreground: 160 20% 18%; /* #1D2E28 */
+
+    --sidebar-primary: 160 20% 18%; /* #1D2E28 */
+
+    --sidebar-primary-foreground: 60 20% 90%; /* #EDE8D0 */
+
+    --sidebar-accent: 60 20% 85%; /* #E8E0C0 */
+
+    --sidebar-accent-foreground: 160 20% 18%; /* #1D2E28 */
+
+    --sidebar-border: 60 20% 70%; /* #D0C890 */
+
+    --sidebar-ring: 160 20% 18%; /* #1D2E28 */
+  }
+
+  .light {
+    --background: 60 20% 90%; /* #EDE8D0 */
+    --foreground: 160 20% 18%; /* #1D2E28 */
+    /* Light mode overrides for Tilawah design - keeping warm as primary */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Performance optimizations for smooth scrolling */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    /* Subtle multi-layer color wash */
+    background-image:
+      radial-gradient(1200px 600px at 10% 10%, hsl(60 20% 95% / 0.5), transparent 60%),
+      radial-gradient(900px 500px at 85% 15%, hsl(160 20% 18% / 0.06), transparent 70%),
+      radial-gradient(1000px 600px at 25% 80%, hsl(50 45% 87% / 0.35), transparent 65%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  /* Optimize scrolling performance */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Account for fixed navbar */
+  }
+
+  /* Reduce layout thrashing during scroll */
+  section {
+    contain: layout style paint;
+  }
+
+  /* Optimize animations */
+  * {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* Improve text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Custom Testimonial Scroll Animations - Now handled by JavaScript */
+
+@layer components {
+  .font-heading {
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .font-subheading {
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
