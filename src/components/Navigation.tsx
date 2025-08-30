@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
+import AppIcon2 from "@/assets/AppIcon2.png";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -75,7 +76,7 @@ const Navigation = () => {
               }}
             >
               <img
-                src="/src/assets/AppIcon2.png"
+                src={AppIcon2}
                 alt="Tilawah"
                 className="w-8 h-8 md:w-11 md:h-11"
               />
