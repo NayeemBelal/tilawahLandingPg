@@ -10,7 +10,7 @@ const FeaturesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-heading text-foreground mb-4 leading-tight max-w-3xl mx-auto">
-            Everything You Need for Quran Excellence
+            Everything You Need for Your Quran Journey
           </h2>
           <p className="text-lg font-subheading text-foreground/80 max-w-2xl mx-auto leading-relaxed">
             Discover the comprehensive tools and features that make Tilawah your perfect Quran companion

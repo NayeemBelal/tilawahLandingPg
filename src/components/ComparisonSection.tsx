@@ -166,7 +166,7 @@ const ComparisonSection = () => {
                     <strong className="text-primary">
                       instant feedback
                     </strong>{" "}
-                    and catch mistakes in real-time
+                    from your partner and catch mistakes in real-time
                   </p>
                 </div>
 
