@@ -1,5 +1,13 @@
 {
   "rewrites": [
+    // Support app routes - must come BEFORE catch-all
+    { "source": "/support", "destination": "https://tilawah-support.vercel.app" },
+    { "source": "/support/:path*", "destination": "https://tilawah-support.vercel.app/:path*" },
+
+    // Specific pages from support app
+    { "source": "/terms", "destination": "https://tilawah-support.vercel.app/terms" },
+
+    // Your existing catch-all for main app (must be LAST)
     { "source": "/(.*)", "destination": "/" }
   ]
 }
