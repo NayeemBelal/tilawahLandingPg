@@ -1,10 +1,10 @@
 {
+  "redirects": [
+    { "source": "/support", "destination": "https://tilawah-support.vercel.app", "permanent": true },
+    { "source": "/support/(.*)", "destination": "https://tilawah-support.vercel.app/$1", "permanent": true },
+    { "source": "/terms", "destination": "https://tilawah-support.vercel.app/terms", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/support", "destination": "https://tilawah-support.vercel.app" },
-    { "source": "/support/(.*)", "destination": "https://tilawah-support.vercel.app/$1" },
-
-    { "source": "/terms", "destination": "https://tilawah-support.vercel.app/terms" },
-
     { "source": "/(.*)", "destination": "/" }
   ]
 }
