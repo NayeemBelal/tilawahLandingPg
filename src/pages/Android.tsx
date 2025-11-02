@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Navigation from "@/components/Navigation";
 import appMockup from "@/assets/app-mockups.png";
-import emailjs from '@emailjs/browser';
 
 const AndroidPage = () => {
   const [name, setName] = useState("");
@@ -26,19 +25,24 @@ const AndroidPage = () => {
     setSubmitStatus("idle");
 
     try {
-      const result = await emailjs.send(
-        'service_or8i3c7', // Replace with your EmailJS service ID
-        'template_hjt3xvl', // Replace with your EmailJS template ID
-        {
-          from_name: name,
-          from_email: email,
-          message: `Android Waitlist Request from ${name} (${email})`,
-          website: "Tilawah",
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        'gJCVxP7dQjZdVFySE' // Replace with your EmailJS public key
-      );
+        body: JSON.stringify({
+          access_key: "fcaebbc6-cfb9-4556-87c1-d782257422e7",
+          name: name,
+          email: email,
+          message: `Android Waitlist Request from ${name} (${email})`,
+          subject: "New Android Waitlist Signup - Tilawah",
+        }),
+      });
 
-      if (result.status === 200) {
+      const result = await response.json();
+
+      if (result.success) {
         setSubmitStatus("success");
         setName("");
         setEmail("");
@@ -46,7 +50,7 @@ const AndroidPage = () => {
         setSubmitStatus("error");
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Form submission error:', error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);

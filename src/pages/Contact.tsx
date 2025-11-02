@@ -3,7 +3,6 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import recitingPpl from "@/assets/recitingPpl.png";
-import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -18,25 +17,32 @@ const Contact = () => {
     setError("");
 
     try {
-      // Replace these with your actual EmailJS credentials
-      const serviceId = "service_bsvzw06"; // Replace with your EmailJS service ID
-      const templateId = "template_i0c19q7"; // Replace with your EmailJS template ID
-      const publicKey = "8W9hBpF3VBPIBHNyH"; // Replace with your EmailJS public key
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "fcaebbc6-cfb9-4556-87c1-d782257422e7",
+          name: "Contact Form User",
+          email: email,
+          message: message,
+          subject: "New Contact Form Submission from Tilawah",
+        }),
+      });
 
-      const templateParams = {
-        from_email: email,
-        message: message,
-        to_email: "your-email@example.com", // Replace with your email
-        website: "Tilawah",
-      };
+      const result = await response.json();
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
-      setIsSubmitted(true);
-      setEmail("");
-      setMessage("");
+      if (result.success) {
+        setIsSubmitted(true);
+        setEmail("");
+        setMessage("");
+      } else {
+        setError(result.message || "Failed to send message. Please try again.");
+      }
     } catch (err) {
-      console.error("Email sending failed:", err);
+      console.error("Form submission failed:", err);
       setError("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
