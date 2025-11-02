@@ -1,18 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/support",
-      "destination": "https://tilawah-support.vercel.app"
-    },
-    {
-      "source": "/support/:path*",
-      "destination": "https://tilawah-support.vercel.app/:path*"
-    },
-    {
-      "source": "/terms",
-      "destination": "https://tilawah-support.vercel.app/terms"
-    },
-    {
       "source": "/(.*)",
       "destination": "/"
     }

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/appleuser/CS Work/Repos/tilawah-support/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
