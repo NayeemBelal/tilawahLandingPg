@@ -1,4 +1,13 @@
 import appIcon from "@/assets/AppIcon.png";
+import { Link } from "react-router-dom";
+
+const footerLinks = [
+  { to: "/privacy-policy", label: "Privacy Policy" },
+  { to: "/terms", label: "Terms of Service" },
+  { to: "/support", label: "Support" },
+  { to: "/contact", label: "Contact" },
+  { to: "/delete-account", label: "Delete Account" },
+];
 
 const Footer = () => {
   return (
@@ -23,6 +32,19 @@ const Footer = () => {
           Your all-in-one companion for building consistency and excellence in Quran recitation.
         </p>
         
+        {/* Policy & page links */}
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-8">
+          {footerLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className="text-background/70 text-sm hover:text-background underline-offset-4 hover:underline transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
         {/* Copyright */}
         <p className="text-background/60 text-sm">
           © 2025 Tilawah. All rights reserved.
